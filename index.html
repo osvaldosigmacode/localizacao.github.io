@@ -22,7 +22,9 @@
             // )
             const watcher = navigator.geolocation.watchPosition(function(position) {
                 console.log(position)
-            })
+            }, function(error) {
+                console.log(error)
+            }, {enableHighAccuracy: true, maximumAge: 10000, timeout: 10000})
         } else {
             alert("ooops")
         }
