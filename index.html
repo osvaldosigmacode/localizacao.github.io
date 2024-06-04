@@ -13,13 +13,16 @@
     <iframe id="map" width="600" src="" height="450" style="border:0" allowfullscreen="" loading="lazy"></iframe>
     <script>
          if ('geolocation' in navigator) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                console.log(position)
-                }, function(error) {
-                    console.log(error)
-                }
+            // navigator.geolocation.getCurrentPosition(function(position) {
+            //     console.log(position)
+            //     }, function(error) {
+            //         console.log(error)
+            //     }
 
-            )
+            // )
+            const watcher = navigator.geolocation.watchPosition(function(position) {
+                console.log(position)
+            })
         } else {
             alert("ooops")
         }
