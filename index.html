@@ -13,13 +13,6 @@
     <iframe id="map" width="600" src="" height="450" style="border:0" allowfullscreen="" loading="lazy"></iframe>
     <script>
          if ('geolocation' in navigator) {
-            // navigator.geolocation.getCurrentPosition(function(position) {
-            //     console.log(position)
-            //     }, function(error) {
-            //         console.log(error)
-            //     }
-
-            // )
             const watcher = navigator.geolocation.watchPosition(function(position) {
                 console.log(position)
             }, function(error) {
@@ -28,14 +21,8 @@
         } else {
             alert("ooops")
         }
-        // if ('geolocation' in navigator) {
-        //     const watcher = navigator.geolocation.watchPosition(function(position) {
-                
-        //     }
-
-        //     )
-        // }
-
+        alert(position.coords.latitude);
+        alert(position.coords.longitude);
     //     function getLocation() {
     //       const status = document.getElementById('status');
     //       const locationOutput = document.getElementById('location');
