@@ -27,7 +27,7 @@
                 console.log(position);
                 // alert(position.coords.latitude);
                 // alert(position.coords.longitude);
-                const mapUrl = 'https://maps.google.pt/maps?hl=pt&q='+position.coords.latitude+','+position.coords.latitude+'&t=&z=17&ie=utf8&iwloc=b&output=embed,&zoom=15&maptype=roadmap';
+                const mapUrl = 'https://maps.google.pt/maps?hl=pt&q='+position.coords.latitude+','+position.coords.longitude+'&t=&z=17&ie=utf8&iwloc=b&output=embed,&zoom=15&maptype=roadmap';
                 mapFrame.src = mapUrl;
             }, function(error) {
                 console.log(error)
