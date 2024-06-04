@@ -10,7 +10,16 @@
     <button onclick="getLocation()">Obter Localização</button>
     <p id="status"></p>
     <p id="location"></p>
-    <iframe id="map" width="600" src="" height="450" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+    <div style='height:400px;width:100%;'>
+        <iframe id="map" width="" height="400"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style='height:300px;width:100%;'> 
+          Von 
+          <a href="" style="font-size:10px;" title="" target="_blank" rel="noopener"></a>
+        </iframe>
+        <p style="text-align:right; margin:0px; padding-top:-10px; line-height:10px;font-size:10px;margin-top: -25px;"> 
+            von 
+            <a href="" style="font-size:10px;" title="" target="_blank" rel="noopener"></a>
+          </p>
+        </div>
     <script>
          if ('geolocation' in navigator) {
             const mapFrame = document.getElementById('map');
