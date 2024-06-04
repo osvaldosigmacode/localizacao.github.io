@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Minha Localização Atual</h1>
-    <button onclick="getLocation()">Obter Localização</button>
+    <!-- <button onclick="getLocation()">Obter Localização</button> -->
     <p id="status"></p>
     <p id="location"></p>
     <div style='height:400px;width:100%;'>
@@ -23,10 +23,12 @@
     <script>
          if ('geolocation' in navigator) {
             const mapFrame = document.getElementById('map');
+            const locationOutput = document.getElementById('location');
             const watcher = navigator.geolocation.watchPosition(function(position) {
                 console.log(position);
-                // alert(position.coords.latitude);
-                // alert(position.coords.longitude);
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                locationOutput.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
                 const mapUrl = 'https://maps.google.pt/maps?hl=pt&q='+position.coords.latitude+','+position.coords.longitude+'&t=&z=17&ie=utf8&iwloc=b&output=embed,&zoom=15&maptype=roadmap';
                 mapFrame.src = mapUrl;
             }, function(error) {
