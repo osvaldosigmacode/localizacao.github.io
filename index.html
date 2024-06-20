@@ -21,6 +21,13 @@
           </p>
         </div>
     <script>
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                location.reload();
+                alert("Página Refrescou");
+            }
+        });
+
          if ('geolocation' in navigator) {
             const mapFrame = document.getElementById('map');
             const locationOutput = document.getElementById('location');
